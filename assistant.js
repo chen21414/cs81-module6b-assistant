@@ -45,3 +45,32 @@ PersonalAssistant.prototype.introduce = function() {
   console.log("You currently have " + this.tasks.length + " task(s).");
 };
 
+//Create a new PersonalAssistant object.
+const myAssistant = new PersonalAssistant("MikeBot");
+
+myAssistant.introduce();
+
+myAssistant.reportMood();
+
+console.log("\nAdding today's tasks...");
+
+myAssistant.addTask("Finish the JavaScript personal assistant assignment");
+myAssistant.addTask("Review pending codes");
+myAssistant.addTask("Study for the exam");
+
+console.log("\nCurrent task list:");
+console.log(myAssistant.tasks);
+
+console.log("\nStarting work...");
+
+// Complete two tasks.
+myAssistant.completeTask();
+myAssistant.completeTask();
+
+// Report the new mood after completing tasks.
+myAssistant.reportMood();
+
+console.log("\nRemaining tasks:");
+console.log(myAssistant.tasks);
+
+
